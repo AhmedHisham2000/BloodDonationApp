@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainFragments.RequestBloodFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/tv_request_blood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/m_request_blood"
+            android:textColor="@color/tv2_color"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/select_blood_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/manrope_semi_bold"
+            android:text="@string/tv_select_blood_type"
+            android:textColor="@color/tv_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_request_blood" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_type_A_positive"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/btn_bg_with_pressed"
+            android:fontFamily="@font/manrope_regular"
+            android:text="A+"
+            android:textColor="@color/tv_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/select_blood_type" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_type_B_positive"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/btn_bg_with_pressed"
+            android:fontFamily="@font/manrope_regular"
+            android:text="B+"
+            android:textColor="@color/tv_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/btn_type_A_positive"
+            app:layout_constraintTop_toBottomOf="@+id/select_blood_type" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_type_AB_positive"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/btn_bg_with_pressed"
+            android:fontFamily="@font/manrope_regular"
+            android:text="AB+"
+            android:textColor="@color/tv_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/btn_type_B_positive"
+            app:layout_constraintTop_toBottomOf="@+id/select_blood_type" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_type_O_positive"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/btn_bg_with_pressed"
+            android:fontFamily="@font/manrope_regular"
+            android:text="O+"
+            android:textColor="@color/tv_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_type_AB_positive"
+            app:layout_constraintTop_toBottomOf="@+id/select_blood_type" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_type_A_nigative"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_bg_with_pressed"
+            android:fontFamily="@font/manrope_regular"
+            android:text="A-"
+            android:textColor="@color/tv_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_type_A_positive"
+            app:layout_constraintStart_toStartOf="@+id/btn_type_A_positive"
+            app:layout_constraintTop_toBottomOf="@+id/btn_type_A_positive" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_type_O_nigative"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_bg_with_pressed"
+            android:fontFamily="@font/manrope_regular"
+            android:text="O-"
+            android:textColor="@color/tv_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_type_O_positive"
+            app:layout_constraintStart_toStartOf="@+id/btn_type_O_positive"
+            app:layout_constraintTop_toBottomOf="@+id/btn_type_O_positive" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_type_AB_nigative"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_bg_with_pressed"
+            android:fontFamily="@font/manrope_regular"
+            android:text="AB-"
+            android:textColor="@color/tv_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_type_AB_positive"
+            app:layout_constraintStart_toStartOf="@+id/btn_type_AB_positive"
+            app:layout_constraintTop_toBottomOf="@+id/btn_type_AB_positive" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_type_B_nigative"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_bg_with_pressed"
+            android:fontFamily="@font/manrope_regular"
+            android:text="B-"
+            android:textColor="@color/tv_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_type_B_positive"
+            app:layout_constraintStart_toStartOf="@+id/btn_type_B_positive"
+            app:layout_constraintTop_toBottomOf="@+id/btn_type_B_positive" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/manrope_semi_bold"
+            android:text="@string/tv_how_many_units_needed"
+            android:textColor="@color/tv_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_type_A_nigative" />
+
+
+
+        <Spinner
+            android:id="@+id/sp_no_of_units"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/spinner_selector"
+            android:entries="@array/num_of_nuits"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/manrope_semi_bold"
+            android:text="@string/tv_hospital_name_and_location"
+            android:textColor="@color/tv_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sp_no_of_units" />
+
+        <Spinner
+            android:id="@+id/sp_hospital_location"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/spinner_selector"
+            android:entries="@array/hospital_location"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/manrope_semi_bold"
+            android:text="@string/tv_additional_information_optional"
+            android:textColor="@color/tv_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sp_hospital_location" />
+
+        <!--
+         TODO:  Add the new color when the user clicked in any button
+
+         -->
+        <EditText
+            android:id="@+id/et_info_RBlood"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/spinner_selector"
+            android:gravity="start"
+            android:hint="@string/et_hint_any_information_that_we_should_consider"
+            android:maxLines="3"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
