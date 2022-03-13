@@ -146,7 +146,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:fontFamily="@font/manrope_bold"
-                    android:inputType="textPassword|numberPassword"
+                    android:inputType="textPassword"
                     tools:layout_editor_absoluteY="5dp" />
 
             </com.google.android.material.textfield.TextInputLayout>

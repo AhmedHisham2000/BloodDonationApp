@@ -47,5 +47,15 @@
         app:srcCompat="@drawable/ic_add"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
+<!--    <ImageView-->
+<!--        android:id="@+id/fade"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:background="@drawable/custom_fab"-->
+<!--        android:padding="8dp"-->
+<!--        app:layout_anchor="@id/bottomAppBar"-->
+<!--        android:gravity="center"-->
+<!--        android:src="@drawable/fba" />-->
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

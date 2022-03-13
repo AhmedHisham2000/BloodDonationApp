@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.blooddonation.Activities.DonateBloodActivity;
 import com.example.blooddonation.Activities.LoginActivity;
 import com.example.blooddonation.Activities.MainActivity;
 import com.example.blooddonation.Activities.RegisterActivity;
@@ -83,15 +82,20 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_Profile_donateBlood:
-                startActivity(new Intent(getActivity(), DonateBloodActivity.class));
+                DonateFragment fragment = new DonateFragment();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =        fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.frameLayout, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
                 break;
             case R.id.btn_signOut:
                 userSignOut();
                 break;
             case R.id.btn_profile_requestBlood:
                 RequestBloodFragment fragment2 = new RequestBloodFragment();
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction =        fragmentManager.beginTransaction();
+                 fragmentManager = getFragmentManager();
+                 fragmentTransaction =        fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frameLayout, fragment2);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();

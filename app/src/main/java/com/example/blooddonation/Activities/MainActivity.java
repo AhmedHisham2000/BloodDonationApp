@@ -1,25 +1,21 @@
 package com.example.blooddonation.Activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 import com.example.blooddonation.MainFragments.HomeFragment;
+import com.example.blooddonation.MainFragments.DonateFragment;
 import com.example.blooddonation.MainFragments.NotificationFragment;
 import com.example.blooddonation.MainFragments.ProfileFragment;
 import com.example.blooddonation.MainFragments.RequestBloodFragment;
 import com.example.blooddonation.R;
-import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
@@ -40,7 +36,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Navigate the user to @DonateBloodActivity
-                startActivity(new Intent(getApplicationContext(),DonateBloodActivity.class));
+//                startActivity(new Intent(getApplicationContext(),DonateBloodActivity.class));
+
+                //TODO Change DonateBloodActivity To My Fragment
+                DonateFragment fragment=new DonateFragment();
+                FragmentManager manager=getSupportFragmentManager();
+                FragmentTransaction transaction=manager.beginTransaction();
+                transaction.replace(R.id.frameLayout,fragment,null);
+                transaction.commit();
+
             }
         });
 

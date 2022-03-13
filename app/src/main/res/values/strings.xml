@@ -23,7 +23,7 @@
     <!--
     array of the spinner of no of nuits
      -->
-    <string-array name="num_of_nuits">
+    <string-array name="num_of_units">
         <item>1 </item>
         <item>2</item>
         <item>3</item>
@@ -99,7 +99,7 @@
     <string name="m_profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="good_evining">Good evining</string>
+    <string name="good_evining">Good Morning</string>
     <string name="btn_donate_blood">Donate Blood</string>
     <string name="btn_find_blood_bank">Find Blood Bank</string>
     <string name="tv_select_blood_type">Select Blood type</string>
